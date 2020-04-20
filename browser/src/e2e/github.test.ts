@@ -54,7 +54,7 @@ describe('Sourcegraph browser extension on github.com', function () {
             token: 'host',
             lineId: 'diff-9ef8a22c4ce5141c30a501c542fb1adeR247',
             goToDefinitionURL:
-                'https://github.com/gorilla/mux/blob/e73f183699f8ab7d54609771e1fa0ab7ffddc21b/regexp.go#L233:2',
+                'https://sourcegraph.com/github.com/gorilla/mux@e73f183699f8ab7d54609771e1fa0ab7ffddc21b/-/blob/regexp.go#L247:24&tab=def',
         },
     }
 
