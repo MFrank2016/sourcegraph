@@ -108,7 +108,12 @@ describe('Sourcegraph browser extension on github.com', function () {
                             driver.page.waitForNavigation(),
                             driver.page.click('.e2e-tooltip-go-to-definition'),
                         ])
-                        assert.strictEqual(await driver.page.evaluate(() => location.href), goToDefinitionURL)
+                        await retry(
+                            async () => {
+                                assert.strictEqual(await driver.page.evaluate(() => location.href), goToDefinitionURL)
+                            },
+                            { retries: 3 }
+                        )
                     })
                 }
             })
